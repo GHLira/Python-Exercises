@@ -1,15 +1,26 @@
 import math as m
 
-valor = int(input("Digite um valor para decompor em notas: "))
-notas = [200, 100, 50, 20, 10, 5, 2]
-quantidade_notas = {}
+# Obter um valor e informar a menor quantidade possível de notas
+valor = int(input("Digite um valor em reais: "))
+notas_200 = valor // 200
+valor %= 200
+notas_100 = valor // 100
+valor %= 100
+notas_50 = valor // 50
+valor %= 50
+notas_20 = valor // 20
+valor %= 20
+notas_10 = valor // 10
+valor %= 10
+notas_5 = valor // 5
+valor %= 5
+notas_2 = valor // 2
+valor %= 2
 
-for nota in notas:
-    quantidade_notas[nota] = valor // nota
-    valor %= nota
-
-print("Menor quantidade de notas:")
-for nota, qtd in quantidade_notas.items():
-    if qtd > 0:
-        print(f"{qtd} nota(s) de {nota}")
-
+print(f"Notas de 200: {notas_200}")
+print(f"Notas de 100: {notas_100}")
+print(f"Notas de 50: {notas_50}")
+print(f"Notas de 20: {notas_20}")
+print(f"Notas de 10: {notas_10}")
+print(f"Notas de 5: {notas_5}")
+print(f"Notas de 2: {notas_2}")
